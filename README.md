@@ -1,1 +1,1 @@
-# Galeria_artes_artistas
+# Galeria de Artes
