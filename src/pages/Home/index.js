@@ -11,6 +11,7 @@ import { AppLoading } from 'expo'
 import CardsHome from '../../components/CardsHome'
 
 import Header from '../../components/Header'
+import Title from '../../components/Title'
 
 const HomePage = () => {
 
@@ -28,9 +29,7 @@ const HomePage = () => {
         <ContainerPage>
             <Header />
 
-            <ContainerTextPrincipal>
-                <Text style={styles.titulo}>Explore e Descubra Artistas</Text>
-            </ContainerTextPrincipal>
+            <Title name="Explore e Descubra Artistas" />
 
             <ContainerCardsHome>
                 <CardsHome name="Artistas"/>
@@ -45,12 +44,6 @@ const HomePage = () => {
 }
 
 const styles = StyleSheet.create({
-    titulo: {
-        fontFamily: "Nunito_700Bold",
-        fontSize: 35,
-        width: 295,
-        color: "#000000",
-    },
 
     subtitulo: {
         fontSize: 16,
