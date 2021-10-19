@@ -15,7 +15,7 @@ const CardsHome = ({ name }) => {
     }
 
     return (
-        <Container>
+        <Container activeOpacity={.8}>
             <Text style={styles.title}>{name}</Text>
         </Container>
     )
