@@ -10,6 +10,8 @@ import { Nunito_700Bold, Nunito_400Regular, Nunito_200ExtraLight, useFonts } fro
 import { AppLoading } from 'expo'
 import CardsHome from '../../components/CardsHome'
 
+import Header from '../../components/Header'
+
 const HomePage = () => {
 
     const fonts = useFonts({
@@ -24,6 +26,8 @@ const HomePage = () => {
 
     return (
         <ContainerPage>
+            <Header />
+
             <ContainerTextPrincipal>
                 <Text style={styles.titulo}>Explore e Descubra Artistas</Text>
             </ContainerTextPrincipal>

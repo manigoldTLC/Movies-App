@@ -2,14 +2,14 @@ import styled from 'styled-components/native';
 
 export const ContainerPage = styled.View`
     flex: 1;
-    background-color: #ffffff;
+    background-color: #f8f8ff;
     justify-content: flex-start;
 `;
 
 export const ContainerTextPrincipal = styled.View`
     width: 100%;
-    margin: 12% 24px;
-    margin-top: 20%;
+    margin: 8% 24px;
+    margin-top: 12%;
 `;
 
 export const TextPrincipal = styled.Text`
