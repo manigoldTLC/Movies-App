@@ -7,6 +7,7 @@ import artesPage from '../pages/artesPage';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import ShowArtista from '../pages/ShowArtista';
 
 const Drawer = createDrawerNavigator();
 
@@ -59,6 +60,20 @@ const Routes = () => {
                 component={artesPage}
                 options={{
                     title: "Ver Artes",
+                    drawerIcon: ({focused, size, color}) => (
+                        <MaterialCommunityIcons 
+                            name={focused ? 'image-filter-frames' : 'image-frame'}
+                            size={size}
+                            color={color}
+                        />
+                    )
+                }}
+            />
+            <Drawer.Screen 
+                name="Página do Arista"
+                component={ShowArtista}
+                options={{
+                    title: "Ver Artista",
                     drawerIcon: ({focused, size, color}) => (
                         <MaterialCommunityIcons 
                             name={focused ? 'image-filter-frames' : 'image-frame'}

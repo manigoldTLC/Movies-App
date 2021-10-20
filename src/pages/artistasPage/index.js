@@ -3,7 +3,7 @@ import { Container, ContainerCards } from './styled';
 
 import Title from '../../components/Title';
 import Header from '../../components/Header';
-import TemplateCard from '../../components/TemplateCard';
+import TemplateCardArtistas from '../../components/TemplateCardArtistas';
 import { ScrollView } from 'react-native';
 
 const artistasPage = () => {
@@ -15,7 +15,7 @@ const artistasPage = () => {
             <ScrollView>
                 <ContainerCards
                     data={[1, 2, 3, 4, 5, 6, 7, 8]}
-                    renderItem={({ item }) => <TemplateCard />}
+                    renderItem={({ item }) => <TemplateCardArtistas name="Pablo Picasso" />}
                     numColumns={2}
                     horizonal={false}
                 />

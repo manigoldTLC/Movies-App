@@ -7,7 +7,7 @@ import { StatusBar } from 'react-native';
 export default function App() {
   return (
     <NavigationContainer>
-    <StatusBar hidden={true} />
+    <StatusBar hidden={false} />
       <Routes />
     </NavigationContainer>
   );
