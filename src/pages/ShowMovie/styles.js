@@ -4,9 +4,19 @@ export const Container = styled.View`
     flex: 1;
     background-color: #f8f8ff;
     padding: 14px;
+    align-items: center;
+    
 `;
 
-export const ArtistaContainer = styled.View`
+export const LoadContainer = styled.View`
+    flex: 1;
+    background-color: #f8f8ff;
+    padding: 14px;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const FilmeContainer = styled.View`
     width: 371px;
     height: 382px;
     border-radius: 10px;
@@ -15,7 +25,7 @@ export const ArtistaContainer = styled.View`
     align-items: center;
 `;
 
-export const ImagemArtista = styled.Image`
+export const ImagemFilme = styled.Image`
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -28,7 +38,7 @@ export const ContainerText = styled.View`
     border-radius: 10px;
     bottom: 0;
     width: 359px;
-    height: 85px;
+    height: auto;
     margin-bottom: 5px;
 `;
 
@@ -45,10 +55,27 @@ export const TitleContainerText = styled.Text`
     margin-top: -5px;
 `;
 
-export const DescriptionContainerText = styled.Text`
+export const DescriptionContainerText = styled.View`
     font-style: normal;
-    font-weight: 100;
     font-size: 14px;
+    color: #000;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+`;
+
+export const AvaliacaoContainer = styled.View`
+    flex-direction: row;
+    align-items: center;
+`;
+
+export const Avaliacao = styled.Text`
+    color: #000;
+    margin-left: 8px;
+`;
+
+export const Lancamento = styled.Text`
     color: #000;
 `;
 
@@ -57,7 +84,7 @@ export const Subtitle = styled.Text`
     font-weight: bold;
     font-size: 18px;
     color: #000;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
 `;
 
@@ -68,6 +95,8 @@ export const SliderArte = styled.FlatList`
 
 export const VerMaisContainer = styled.TouchableOpacity`
     align-items: flex-end;
+    margin-right: 5px;
+    margin-top: 15px;
     width: 100%;
 `;
 
@@ -76,7 +105,6 @@ export const VerMaisBotao = styled.Text`
     font-weight: 600;
     font-size: 14px;
     color: #5785F4;
-    margin-right: 5px;
 `;
 
 export const ContainerArtista = styled.View`
@@ -87,7 +115,13 @@ export const DescricaoArtista = styled.Text`
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.6);
+    
+`;
 
-    color: rgba(0, 0, 0, 0.8);
+export const ListaGeneros = styled.FlatList`
+    margin: 8px 0;
+    max-height: 35px;
+    min-height: 35px;
 `;

@@ -2,12 +2,12 @@ import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import StackRouter from './stackRoutes';
 
-import artistasPage from '../pages/artistasPage';
-import artesPage from '../pages/artesPage';
+// import artistasPage from '../pages/artistasPage';
+// import artesPage from '../pages/artesPage';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
-import ShowArtista from '../pages/ShowArtista';
+// import { Ionicons } from '@expo/vector-icons';
+// import ShowArtista from '../pages/ShowArtista';
 
 const Drawer = createDrawerNavigator();
 
@@ -41,7 +41,7 @@ const Routes = () => {
                     )
                 }}
             />
-            <Drawer.Screen 
+            {/* <Drawer.Screen 
                 name="Página Artistas"
                 component={artistasPage}
                 options={{
@@ -54,8 +54,8 @@ const Routes = () => {
                         />
                     )
                 }}
-            />
-            <Drawer.Screen 
+            /> */}
+            {/* <Drawer.Screen 
                 name="Página de Artes"
                 component={artesPage}
                 options={{
@@ -68,21 +68,7 @@ const Routes = () => {
                         />
                     )
                 }}
-            />
-            <Drawer.Screen 
-                name="Página do Arista"
-                component={ShowArtista}
-                options={{
-                    title: "Ver Artista",
-                    drawerIcon: ({focused, size, color}) => (
-                        <MaterialCommunityIcons 
-                            name={focused ? 'image-filter-frames' : 'image-frame'}
-                            size={size}
-                            color={color}
-                        />
-                    )
-                }}
-            />
+            /> */}
         </Drawer.Navigator>
     )
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
-import { Nunito_400Regular, useFonts } from '@expo-google-fonts/nunito';
 import {
     Container,
     MenuContainer,
@@ -13,14 +12,6 @@ import { useNavigation } from '@react-navigation/native';
 
 const Header = () => {
 
-    const fonts = useFonts({
-        Nunito_400Regular,
-    })
-
-    if (!fonts) {
-        return <AppLoading />
-    }
-
     const navigation = useNavigation();
 
     return (
@@ -32,16 +23,12 @@ const Header = () => {
                     color="#000"
                 />
             </MenuContainer>
-            <Title style={styles.title}>Gc<Text style={styles.p}>.</Text></Title>
+            <Title>Gc<Text style={styles.p}>.</Text></Title>
         </Container>
     )
 }
 
 const styles = StyleSheet.create({
-    title: {
-        fontFamily: "Nunito_400Regular",
-    },
-
     p: {
         color: '#5785F4',
         fontWeight: 'bold',
