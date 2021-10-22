@@ -130,7 +130,7 @@ const HomePage = () => {
                     showsHorizontalScrollIndicator={false}
                     data={popularMovies}
                     renderItem={({ item }) => <SliderItemHome data={item} navigatePage={() => navigateMovieShow(item)} />}
-                    keyExtrator={(item) => String(item.id)}
+                    keyExtractor={(item) => String(item.id)}
                 />
 
                 <Subtitle>Filme recomendado</Subtitle>
@@ -138,6 +138,7 @@ const HomePage = () => {
                     <Banner
                         resizeMethod="resize"
                         source={{ uri: `https://image.tmdb.org/t/p/original/${bannerMovie.poster_path}` }}
+                        alt="Banner do filme"
                     />
                 </BannerBottom>
 
@@ -147,7 +148,7 @@ const HomePage = () => {
                     showsHorizontalScrollIndicator={false}
                     data={upcomingMovies}
                     renderItem={({ item }) => <SliderItemHome data={item} navigatePage={() => navigateMovieShow(item)} />}
-                    keyExtrator={(item) => String(item.id)}
+                    keyExtractor={(item) => String(item.id)}
                 />
             </ScrollView>
 

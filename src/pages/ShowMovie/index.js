@@ -17,7 +17,7 @@ import {
     Avaliacao,
     Lancamento,
     ListaGeneros,
-    LoadContainer
+    LoadContainer,
 } from './styles';
 import { AntDesign } from '@expo/vector-icons'; 
 
@@ -27,6 +27,7 @@ import HeaderStack from '../../components/HeaderStack';
 import { useNavigation, useRoute } from '@react-navigation/native'
 
 import {api, key } from '../../services/api';
+import { hasMovie, saveMovie, deleteMovie } from '../../utils/storage';
 
 const ShowMovie = () => {
 
@@ -34,6 +35,7 @@ const ShowMovie = () => {
     const route = useRoute();
 
     const [ showMovie, setShowMovie ] = useState({});
+    const [ handleFavoriteMovie, setHandleFavoriteMovie ] = useState(false);
     const [ loading, setLoading ] = useState(true);
 
     useEffect(() => {
@@ -52,6 +54,10 @@ const ShowMovie = () => {
 
             if (isActive) {
                 setShowMovie(response.data);
+
+                const isFavorite = await hasMovie(response.data);
+                setHandleFavoriteMovie(isFavorite);
+
                 setLoading(false);
             }
         }
@@ -66,6 +72,20 @@ const ShowMovie = () => {
 
     }, [])
 
+    async function favoriteMovie(movie) {
+
+        if (handleFavoriteMovie) {
+            await deleteMovie(movie.id);
+            setHandleFavoriteMovie(false);
+
+        } else {
+            await saveMovie('gabriel-key', movie);
+            setHandleFavoriteMovie(true);
+            alert('Filme adicionado aos favoritos');
+        }
+
+    }
+
     if (loading) {
         return (
             <LoadContainer syles={ styles.loadContainer }>
@@ -76,7 +96,13 @@ const ShowMovie = () => {
 
     return (
         <Container>
-            <HeaderStack color={"#fff"} navigateGoBack={() => navigation.goBack()}/>
+            <HeaderStack
+                iconCondition={handleFavoriteMovie}
+                navigateGoBack={() => navigation.goBack()}
+                handleFavorite={() => favoriteMovie(showMovie)}
+                color={"#fff"} 
+            />
+            
             <FilmeContainer>
                 <ImagemFilme
                     resizeMethod="resize"
@@ -113,7 +139,7 @@ const ShowMovie = () => {
                     data={showMovie?.genres}
                     horizontal={true}
                     showsHorizontalScrollIndicator={false}
-                    keyExtrator={(item) => String(item.id)}
+                    keyExtractor={(item) => String(item.id)}
                     renderItem={({ item }) => <Generos data={item} />}
                 />
 

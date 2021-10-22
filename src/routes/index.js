@@ -2,12 +2,10 @@ import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import StackRouter from './stackRoutes';
 
-// import artistasPage from '../pages/artistasPage';
-// import artesPage from '../pages/artesPage';
-
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-// import { Ionicons } from '@expo/vector-icons';
-// import ShowArtista from '../pages/ShowArtista';
+import { MaterialIcons } from '@expo/vector-icons';
+
+import Favoritos from '../pages/Favoritos';
 
 const Drawer = createDrawerNavigator();
 
@@ -18,13 +16,11 @@ const Routes = () => {
                 headerShown: false,
 
                 drawerStyle: {
-                    backgroundColor: "#000",
+                    
                     paddingTop: 30,
                 },
 
-                drawerActiveBackgroundColor: "#474A51",
-                drawerActiveTintColor: "#fff",
-                drawerInactiveTintColor: '#fff'
+                
             }}
         >
             <Drawer.Screen 
@@ -41,34 +37,20 @@ const Routes = () => {
                     )
                 }}
             />
-            {/* <Drawer.Screen 
-                name="Página Artistas"
-                component={artistasPage}
+            <Drawer.Screen 
+                name="Favoritos"
+                component={Favoritos}
                 options={{
-                    title: "Ver Artistas",
+                    title: "Favoritos",
                     drawerIcon: ({ focused, size, color }) => (
-                        <Ionicons
-                            name={focused ? 'md-brush': 'md-brush-outline'}
+                        <MaterialIcons
+                            name={focused ? 'favorite' : 'favorite-outline'}
                             size={size}
                             color={color}
                         />
                     )
                 }}
-            /> */}
-            {/* <Drawer.Screen 
-                name="Página de Artes"
-                component={artesPage}
-                options={{
-                    title: "Ver Artes",
-                    drawerIcon: ({focused, size, color}) => (
-                        <MaterialCommunityIcons 
-                            name={focused ? 'image-filter-frames' : 'image-frame'}
-                            size={size}
-                            color={color}
-                        />
-                    )
-                }}
-            /> */}
+            />
         </Drawer.Navigator>
     )
 }

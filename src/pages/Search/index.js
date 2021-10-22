@@ -58,16 +58,14 @@ const Search = () => {
 
     return (
         <Container>
-            <ScrollView>
-                <ContainerCards
-                    data={movie}
-                    showsVerticalScrollIndicator={false}
-                    renderItem={({ item }) => <TemplateCardSearchMovie data={item} navigatePage={() => navigateShowMoviePage(item)} />}
-                    keyExtrator={(item) => String(item.id)}
-                    numColumns={2}
-                    horizonal={false}
-                />
-            </ScrollView>
+            <ContainerCards
+                data={movie}
+                showsVerticalScrollIndicator={false}
+                renderItem={({ item }) => <TemplateCardSearchMovie data={item} navigatePage={() => navigateShowMoviePage(item)} />}
+                keyExtrator={(item) => String(item.id)}
+                numColumns={2}
+                horizonal={true}
+            />
         </Container>
     )
 }

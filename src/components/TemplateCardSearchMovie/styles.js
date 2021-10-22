@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.TouchableOpacity`
     width: 48%;
-    height: 183px;
+    height: 280px;
     border-radius: 10px;
     margin-bottom: 30px;
     margin-right: 8px;
@@ -11,7 +11,7 @@ export const Container = styled.TouchableOpacity`
 
 export const ImageItem = styled.Image`
     width: 100%;
-    height: 173px;
+    height: 270px;
     border-radius: 10px;
 `;
 
