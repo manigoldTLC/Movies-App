@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, StyleSheet, ActivityIndicator } from 'react-native'
+import { ScrollView, StyleSheet, ActivityIndicator, Modal } from 'react-native'
 import {
     Container,
     ContainerText,
@@ -23,6 +23,7 @@ import { AntDesign } from '@expo/vector-icons';
 
 import Generos from '../../components/Generos';
 import HeaderStack from '../../components/HeaderStack';
+import ViewMore from '../../components/ViewMore';
 
 import { useNavigation, useRoute } from '@react-navigation/native'
 
@@ -37,6 +38,7 @@ const ShowMovie = () => {
     const [ showMovie, setShowMovie ] = useState({});
     const [ handleFavoriteMovie, setHandleFavoriteMovie ] = useState(false);
     const [ loading, setLoading ] = useState(true);
+    const [ openModal, setOpenModal ] = useState(false);
 
     useEffect(() => {
         let isActive = true;
@@ -130,7 +132,7 @@ const ShowMovie = () => {
 
             <ScrollView showsVerticalScrollIndicator={false}>
 
-                <VerMaisContainer>
+                <VerMaisContainer onPress={() => setOpenModal(true)}>
                     <VerMaisBotao activeOpacity={.7}>Ver mais</VerMaisBotao>
                 </VerMaisContainer>
 
@@ -146,10 +148,18 @@ const ShowMovie = () => {
                 <Subtitle numberOfLines={1}>Um pouco sobre {showMovie.title}</Subtitle>
                 <ContainerArtista>
                     <DescricaoArtista>
-                        {showMovie.overview}
+                        {showMovie?.overview}
                     </DescricaoArtista>
                 </ContainerArtista>
             </ScrollView>
+
+            <Modal animationType="slide" transparent={false} visible={openModal}>
+                <ViewMore
+                    link={showMovie?.homepage}
+                    title={showMovie?.title}
+                    closeModal={() => setOpenModal(false)}
+                />
+            </Modal>
 
         </Container>
     )
