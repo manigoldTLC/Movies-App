@@ -16,7 +16,7 @@ const TemplateCardSearchMovie = ({data, navigatePage}) => {
        <Container activeOpacity={.7} onPress={showMovie}>
             { data?.poster_path ? (
                 <ImageItem
-                    resizeMethod="resize"
+                    resizeMode="contain"
                     source={{ uri: `https://image.tmdb.org/t/p/original/${data?.poster_path}` }}
                 />
             ) : (

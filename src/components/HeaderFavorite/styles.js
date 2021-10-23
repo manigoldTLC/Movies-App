@@ -8,7 +8,7 @@ export const Container = styled.View`
     padding: 30px 15px;
     flex-direction: row;
     align-items: center;
-    background-color: #fff;
+    background-color: #000;
 `;
 
 export const ContainerArrow = styled.TouchableOpacity`
@@ -16,12 +16,12 @@ export const ContainerArrow = styled.TouchableOpacity`
     height: 40px;
     align-items: center;
     justify-content: center;
-    background-color: rgba(220, 240, 239, 0.43);
+    background-color: #333333;
     border-radius: 50px;
 `;
 
 export const Text = styled.Text`
-    color: #000;
+    color: #FEFEFF;
     font-weight: bold;
     font-size: 20px;
     margin-left: 15px;

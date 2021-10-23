@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
     flex: 1;
-    background-color: #f8f8ff;
+    background-color: #07070F;
     padding: 14px;
     align-items: center;
     
@@ -10,15 +10,14 @@ export const Container = styled.View`
 
 export const LoadContainer = styled.View`
     flex: 1;
-    background-color: #f8f8ff;
-    padding: 14px;
+    background-color: #07070F;
     align-items: center;
     justify-content: center;
 `;
 
 export const FilmeContainer = styled.View`
     width: 371px;
-    height: 382px;
+    height: 475px;
     border-radius: 10px;
     position: relative;
     justify-content: center;
@@ -33,7 +32,7 @@ export const ImagemFilme = styled.Image`
 
 export const ContainerText = styled.View`
     position: absolute;
-    background-color: #fff;
+    background-color: #333333;
     padding: 8px;
     border-radius: 10px;
     bottom: 0;
@@ -48,7 +47,7 @@ export const WrapperTexts = styled.View`
 `;
 
 export const TitleContainerText = styled.Text`
-    color: #000;
+    color: #FEFEFF;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -58,7 +57,7 @@ export const TitleContainerText = styled.Text`
 export const DescriptionContainerText = styled.View`
     font-style: normal;
     font-size: 14px;
-    color: #000;
+    color: #FEFEFF;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
@@ -71,19 +70,19 @@ export const AvaliacaoContainer = styled.View`
 `;
 
 export const Avaliacao = styled.Text`
-    color: #000;
+    color: #FEFEFF;
     margin-left: 8px;
 `;
 
 export const Lancamento = styled.Text`
-    color: #000;
+    color: #FEFEFF;
 `;
 
 export const Subtitle = styled.Text`
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
-    color: #000;
+    color: #FEFEFF;
     margin-top: 10px;
     margin-bottom: 10px;
 `;
@@ -104,7 +103,7 @@ export const VerMaisBotao = styled.Text`
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    color: #5785F4;
+    color: #5B85E9;
 `;
 
 export const ContainerArtista = styled.View`
@@ -116,7 +115,7 @@ export const DescricaoArtista = styled.Text`
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
-    color: rgba(0, 0, 0, 0.6);
+    color: #9C9BA0;
     
 `;
 

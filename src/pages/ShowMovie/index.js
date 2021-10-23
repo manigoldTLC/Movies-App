@@ -89,7 +89,7 @@ const ShowMovie = () => {
     if (loading) {
         return (
             <LoadContainer syles={ styles.loadContainer }>
-                <ActivityIndicator size="large" color="#000"/>
+                <ActivityIndicator size="large" color="#FEFEFF"/>
             </LoadContainer>
         )
     }
@@ -105,7 +105,7 @@ const ShowMovie = () => {
             
             <FilmeContainer>
                 <ImagemFilme
-                    resizeMethod="resize"
+                    resizeMode="cover"
                     source={{ uri: `https://image.tmdb.org/t/p/original/${showMovie.poster_path}` }}
                     alt="Imagem do filme"
                 />

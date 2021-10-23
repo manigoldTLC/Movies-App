@@ -14,13 +14,14 @@ const Routes = () => {
         <Drawer.Navigator
             screenOptions={{
                 headerShown: false,
-
                 drawerStyle: {
-                    
+                    backgroundColor: "#07070F",
                     paddingTop: 30,
                 },
 
-                
+                drawerInactiveTintColor: "#FEFEFF",
+                drawerActiveTintColor: "#fff",
+                drawerActiveBackgroundColor: "#5B85E9"
             }}
         >
             <Drawer.Screen 

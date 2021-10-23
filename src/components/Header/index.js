@@ -20,7 +20,7 @@ const Header = () => {
                 <MdMenu
                     name="menu"
                     size={30}
-                    color="#000"
+                    color="#FEFEFF"
                 />
             </MenuContainer>
             <Title>Gc<Text style={styles.p}>.</Text></Title>

@@ -7,9 +7,10 @@ import {
     Subtitle,
     SearchContainer,
     Input,
-    SearchButton
+    SearchButton,
+    TextBanner
 } from './styles';
-import { ScrollView, StyleSheet, ActivityIndicator } from 'react-native';
+import { ScrollView, StyleSheet, ActivityIndicator, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native'
 
 import { Feather } from '@expo/vector-icons';
@@ -103,7 +104,7 @@ const HomePage = () => {
     if (loading) {
         return (
             <ContainerPage style={style.loadContainer}>
-                <ActivityIndicator size="large" color="#000"/>
+                <ActivityIndicator size="large" color="#FEFEFF"/>
             </ContainerPage>
         )
     }
@@ -115,11 +116,12 @@ const HomePage = () => {
             <SearchContainer>
                 <Input
                     placeholder="Pesquisar filme..."
+                    placeholderTextColor="#717173"
                     value={input}
                     onChangeText={(text) => setInput(text)}
                 />
                 <SearchButton onPress={handleSearchMovie}>
-                    <Feather name="search" size={35} color="black" />
+                    <Feather name="search" size={35} color="#FEFEFF" />
                 </SearchButton>
             </SearchContainer>
 
@@ -136,10 +138,12 @@ const HomePage = () => {
                 <Subtitle>Filme recomendado</Subtitle>
                 <BannerBottom activeOpacity={.7} onPress={() => navigateMovieShow(bannerMovie)}>
                     <Banner
-                        resizeMethod="resize"
+                        resizeMode="cover"
                         source={{ uri: `https://image.tmdb.org/t/p/original/${bannerMovie.poster_path}` }}
                         alt="Banner do filme"
                     />
+
+                    <TextBanner numberOfLines={1}>{bannerMovie.title}</TextBanner>
                 </BannerBottom>
 
                 <Subtitle>Confira os próximos lançamentos</Subtitle>

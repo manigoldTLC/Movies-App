@@ -32,8 +32,9 @@ const stackRoutes = () => {
                 options={{
                     title: "Busca",
                     headerStyle: {
-                        backgroundColor: "#fff"
-                    }
+                        backgroundColor: "#000",
+                    },
+                    headerTintColor: "#FEFEFF"
                 }}
             />
         </Stack.Navigator>

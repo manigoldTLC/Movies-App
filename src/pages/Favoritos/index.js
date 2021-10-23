@@ -52,7 +52,7 @@ const Favoritos= () => {
         <Container>
              <HeaderFavorite
                 navigateGoBack={() => navigation.goBack()}
-                color={"#000"} 
+                color={"#FEFEFF"} 
             />
 
             <Wrapper>

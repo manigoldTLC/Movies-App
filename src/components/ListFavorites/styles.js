@@ -8,7 +8,7 @@ export const Container = styled.View`
 
 export const ContainerImage = styled.View`
     width: 100%;
-    height: 350px;
+    height: 400px;
     border-radius: 10px;
 `;
 
@@ -20,21 +20,22 @@ export const Image = styled.Image`
 
 export const ContainerTitle = styled.View`
     margin: 10px 0;
-    background-color: linear-gradient(115.95deg, rgba(239, 239, 239, 0.6) 10.92%, rgba(255, 255, 255, 0.08) 96.4%);
+    background-color: #333333;
     border-radius: 10px;
     width: 100%;
-    padding: 15px 10px;
+    padding: 20px 15px;
     flex-direction: row;
     justify-content: space-between;
 `;
 
 export const TitleBottom = styled.View`
-    width: 80%;
+    width: 72%;
 `;
 
 export const Title = styled.Text`
     font-size: 18px;
     font-weight: bold;
+    color: #FEFEFF;
 `;
 
 export const Rated = styled.View`
@@ -46,6 +47,7 @@ export const Rated = styled.View`
 
 export const Avaliacao = styled.Text`
     margin-left: 5px;
+    color: #FEFEFF;
 `;
 
 export const ContainerBottom = styled.View`
@@ -59,19 +61,21 @@ export const DetailContainer = styled.TouchableOpacity`
     justify-content: center;
     align-items: center;
     padding: 10px 8px;
-    width: 85%;
-    background-color: #5785F4;
+    width: 80%;
+    background-color: #2764CE;
     border-radius: 10px;
 `;
 
 export const Button = styled.Text`
-    color: #fff;
+    color: #FEFEFF;
 `;
 
 export const TrashContainer = styled.TouchableOpacity`
     justify-content: center;
     align-items: center;
     width: 15%;
-    height: 30px;
-    margin-left: 5px;
+    padding: 10px 8px;
+    background-color: #333333;
+    border-radius: 10px;
+
 `;

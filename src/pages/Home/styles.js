@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const ContainerPage = styled.View`
     flex: 1;
-    background-color: #f8f8ff;
+    background-color: #07070F;
     justify-content: flex-start;
 `;
 
@@ -13,7 +13,7 @@ export const ContainerTextPrincipal = styled.View`
 `;
 
 export const SliderMovies = styled.FlatList`
-    height: 150px;
+    height: 270px;
     padding: 0 14px;
 `;
 
@@ -37,9 +37,9 @@ export const ContainerSubtitulo = styled.View`
 
 export const BannerBottom = styled.TouchableOpacity`
     width: 100%;
-    height: 200px;
+    height: 250px;
     padding: 0 14px;
-    padding-bottom: 20px;
+    padding-bottom: 45px;
     border-radius: 10px;
 `;
 
@@ -49,12 +49,19 @@ export const Banner = styled.Image`
     border-radius: 10px;
 `;
 
+export const TextBanner = styled.Text`
+    color: #fff;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-top: 5px;
+`;
+
 export const Subtitle = styled.Text`
     padding: 0 14px;
     padding-bottom: 15px;
     font-size: 22px;
     font-weight: bold;
-    color: #000;
+    color: #FEFEFF;
 `;
 
 export const SearchContainer = styled.View`
@@ -70,12 +77,12 @@ export const SearchContainer = styled.View`
 `;
 
 export const Input = styled.TextInput`
-    background: rgba(201, 201, 201, 0.5);
+    background-color: #1A191E;
     border-radius: 50px;
     width: 85%;
     height: 40px;
     font-size: 15px;
-    color: #000;
+    color: #FEFEFF;
     padding-left: 15px;
 `;
 
