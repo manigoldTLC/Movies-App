@@ -89,7 +89,7 @@ const ShowMovie = () => {
     if (loading) {
         return (
             <LoadContainer syles={ styles.loadContainer }>
-                <ActivityIndicator size="large" color="#000"/>
+                <ActivityIndicator size="large" color="#FEFEFF"/>
             </LoadContainer>
         )
     }

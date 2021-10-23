@@ -8,8 +8,8 @@ export const Container = styled.View`
 
 export const TextPrincipal = styled.Text`
     font-size: 35px;
-    line-height: 48px;
-    color: #000000;
+    line-height: 42px;
+    color: #FEFEFF;
     font-weight: bold;
-    width: 184px;
+    width: 295px;
 `;

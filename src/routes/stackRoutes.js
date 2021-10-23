@@ -32,7 +32,7 @@ const stackRoutes = () => {
                 options={{
                     title: "Busca",
                     headerStyle: {
-                        backgroundColor: "#fff"
+                        backgroundColor: "#fff",
                     }
                 }}
             />

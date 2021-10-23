@@ -103,7 +103,7 @@ const HomePage = () => {
     if (loading) {
         return (
             <ContainerPage style={style.loadContainer}>
-                <ActivityIndicator size="large" color="#000"/>
+                <ActivityIndicator size="large" color="#FEFEFF"/>
             </ContainerPage>
         )
     }
@@ -115,11 +115,12 @@ const HomePage = () => {
             <SearchContainer>
                 <Input
                     placeholder="Pesquisar filme..."
+                    placeholderTextColor="#717173"
                     value={input}
                     onChangeText={(text) => setInput(text)}
                 />
                 <SearchButton onPress={handleSearchMovie}>
-                    <Feather name="search" size={35} color="black" />
+                    <Feather name="search" size={35} color="#FEFEFF" />
                 </SearchButton>
             </SearchContainer>
 

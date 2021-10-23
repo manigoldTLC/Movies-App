@@ -33,7 +33,7 @@ const ListFavorites = ({ data, navigatePage, deletMovie }) => {
                 </TitleBottom>
 
                 <Rated>
-                    <AntDesign name="star" size={24} color="#ffdb58" />
+                    <AntDesign name="star" size={24} color="#ffdb57" />
                     <Avaliacao>{data.vote_average}/10</Avaliacao>
                 </Rated>
             </ContainerTitle>
@@ -47,7 +47,7 @@ const ListFavorites = ({ data, navigatePage, deletMovie }) => {
                     <MaterialCommunityIcons 
                         name="trash-can" 
                         size={30} 
-                        color="black" />
+                        color="#FEFEFF" />
                 </TrashContainer>
             </ContainerBottom>
         </Container>

@@ -18,13 +18,13 @@ const HeaderStack = ({ color, navigateGoBack, handleFavorite, iconCondition }) =
                 {iconCondition ? (
                     <MaterialIcons
                         name="favorite"
-                        size={30}
-                        color="#ff66cc"
+                        size={25}
+                        color="#FE66CB"
                     />
                 ) : (
                     <MaterialIcons
                         name="favorite-outline"
-                        size={30}
+                        size={25}
                         color="#fff"
                     />
                 )}

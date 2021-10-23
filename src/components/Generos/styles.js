@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-    background-color: #5785F4;
+    background-color: #2764CE;
     border-radius: 10px;
     margin-right: 10px;
     justify-content: center;

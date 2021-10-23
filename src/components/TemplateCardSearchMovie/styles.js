@@ -23,4 +23,5 @@ export const TitleCard = styled.Text`
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
+    color: #FEFEFF;
 `;

@@ -2,8 +2,16 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
     flex: 1;
-    background-color: #f8f8ff;
+    background-color: #07070F;
     padding-top: 10%;
+`;
+
+export const ContainerLoad = styled.View`
+    flex: 1;
+    background-color: #07070F;
+    padding: 14px;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const ContainerCards = styled.FlatList`

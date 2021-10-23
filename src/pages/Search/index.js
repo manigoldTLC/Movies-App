@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import { ActivityIndicator, StyleSheet } from 'react-native';
 
-import { Container, ContainerCards } from './styles';
+import { Container, ContainerCards, ContainerLoad } from './styles';
 import TemplateCardSearchMovie from '../../components/TemplateCardSearchMovie';
 
 import { api, key } from '../../services/api';
@@ -50,9 +50,9 @@ const Search = () => {
 
     if (loading) {
         return (
-            <Container>
-                <Text>Carregando...</Text>
-            </Container>
+            <ContainerLoad>
+                <ActivityIndicator size="large" color="#FEFEFF"/>
+            </ContainerLoad>
         )
     }
 
