@@ -9,6 +9,7 @@ const SliderItemHome = ({ data, navigatePage }) => {
     return (
         <Container activeOpacity={.7} onPress={() => navigatePage(data)}>
             <ImageArte
+                resizeMode="contain"
                 source={{ uri: `https://image.tmdb.org/t/p/original/${data.poster_path}` }}
                 alt="Banner arte"
             />

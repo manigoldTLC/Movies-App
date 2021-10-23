@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
     flex: 1;
     background-color: #07070F;
-    padding-top: 10%;
+    padding-top: 5px;
 `;
 
 export const ContainerLoad = styled.View`

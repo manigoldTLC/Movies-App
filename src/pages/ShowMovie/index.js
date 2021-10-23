@@ -105,7 +105,7 @@ const ShowMovie = () => {
             
             <FilmeContainer>
                 <ImagemFilme
-                    resizeMethod="resize"
+                    resizeMode="cover"
                     source={{ uri: `https://image.tmdb.org/t/p/original/${showMovie.poster_path}` }}
                     alt="Imagem do filme"
                 />

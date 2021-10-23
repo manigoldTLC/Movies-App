@@ -17,7 +17,7 @@ export const LoadContainer = styled.View`
 
 export const FilmeContainer = styled.View`
     width: 371px;
-    height: 382px;
+    height: 475px;
     border-radius: 10px;
     position: relative;
     justify-content: center;

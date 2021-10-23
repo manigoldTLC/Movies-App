@@ -22,6 +22,7 @@ const ListFavorites = ({ data, navigatePage, deletMovie }) => {
         <Container>
             <ContainerImage>
                 <Image
+                    resizeMode="cover"
                     alt="Imagem filme favorito"
                     source={{ uri: `https://image.tmdb.org/t/p/original/${data?.poster_path}` }}
                 />

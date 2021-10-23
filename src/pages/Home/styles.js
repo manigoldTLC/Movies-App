@@ -37,9 +37,9 @@ export const ContainerSubtitulo = styled.View`
 
 export const BannerBottom = styled.TouchableOpacity`
     width: 100%;
-    height: 200px;
+    height: 250px;
     padding: 0 14px;
-    padding-bottom: 20px;
+    padding-bottom: 45px;
     border-radius: 10px;
 `;
 
@@ -47,6 +47,13 @@ export const Banner = styled.Image`
     width: 100%;
     height: 100%;
     border-radius: 10px;
+`;
+
+export const TextBanner = styled.Text`
+    color: #fff;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-top: 5px;
 `;
 
 export const Subtitle = styled.Text`
