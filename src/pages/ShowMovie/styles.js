@@ -15,7 +15,7 @@ export const LoadContainer = styled.View`
     justify-content: center;
 `;
 
-export const FilmeContainer = styled.View`
+export const MovieContainer = styled.View`
     width: 371px;
     height: 475px;
     border-radius: 10px;
@@ -58,15 +58,29 @@ export const DescriptionContainerText = styled.View`
     font-style: normal;
     font-size: 14px;
     color: #FEFEFF;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
     margin-top: 10px;
+    width: 100%;
+`;
+
+export const Infos = styled.View`
+    flex-direction: column;
+    width: 80%;
+    color: #FEFEFE;
+    justify-content: center;
+`;
+
+export const ReleaseDate = styled.Text`
+    color: #FEFEFE;
+    margin-top: 4px;
 `;
 
 export const AvaliacaoContainer = styled.View`
     flex-direction: row;
     align-items: center;
+    width: 20%;
 `;
 
 export const Avaliacao = styled.Text`
