@@ -24,7 +24,11 @@
 
 ### Pré-requisitos
 
-<p>Criar uma conta e gerar uma chave da api no site <a href="https://www.themoviedb.org/">themovie.org</a><br> Em seguida, inserir a chave no espaço reservado no arquivo api na pasta services em ``` export const key = 'inserir chave'; ```</p>
+<p>Criar uma conta e gerar uma chave da api no site <a href="https://www.themoviedb.org/">themovie.org</a><br> Em seguida, inserir a chave no espaço reservado no arquivo api na pasta services em: </p>
+
+```javascript
+export const key = 'inserir chave';
+```
 
 ---
 
