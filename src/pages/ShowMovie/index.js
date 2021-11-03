@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, StyleSheet, ActivityIndicator, Modal } from 'react-native'
+import { ScrollView, StyleSheet, ActivityIndicator, Modal, Text } from 'react-native'
 import {
     Container,
     ContainerText,
     WrapperTexts,
     TitleContainerText,
     DescriptionContainerText,
-    FilmeContainer,
+    MovieContainer,
     ImagemFilme,
     Subtitle,
     VerMaisContainer,
@@ -18,6 +18,8 @@ import {
     Lancamento,
     ListaGeneros,
     LoadContainer,
+    Infos,
+    ReleaseDate
 } from './styles';
 import { AntDesign } from '@expo/vector-icons'; 
 
@@ -39,6 +41,7 @@ const ShowMovie = () => {
     const [ handleFavoriteMovie, setHandleFavoriteMovie ] = useState(false);
     const [ loading, setLoading ] = useState(true);
     const [ openModal, setOpenModal ] = useState(false);
+    const [ date, setDate ] = useState({});
 
     useEffect(() => {
         let isActive = true;
@@ -56,6 +59,7 @@ const ShowMovie = () => {
 
             if (isActive) {
                 setShowMovie(response.data);
+                setDate(response.data.release_date);
 
                 const isFavorite = await hasMovie(response.data);
                 setHandleFavoriteMovie(isFavorite);
@@ -88,6 +92,11 @@ const ShowMovie = () => {
 
     }
 
+    const returnDate = (DATE) => {
+        const date = String(DATE).split('-').reverse().join('/');
+        return date;
+    }
+
     if (loading) {
         return (
             <LoadContainer syles={ styles.loadContainer }>
@@ -105,7 +114,7 @@ const ShowMovie = () => {
                 color={"#fff"} 
             />
             
-            <FilmeContainer>
+            <MovieContainer>
                 <ImagemFilme
                     resizeMode="cover"
                     source={{ uri: `https://image.tmdb.org/t/p/original/${showMovie.poster_path}` }}
@@ -119,7 +128,10 @@ const ShowMovie = () => {
                         </TitleContainerText>
 
                         <DescriptionContainerText>
-                            <Lancamento>Duração: {showMovie.runtime} minutos</Lancamento>
+                            <Infos>
+                                <Lancamento>Duração: {showMovie.runtime} minutos</Lancamento>
+                                <ReleaseDate>Lançamento: {returnDate(date)}</ReleaseDate>
+                            </Infos>
                             <AvaliacaoContainer>
                                 <AntDesign name="star" size={24} color="#ffdb58" />
                                 <Avaliacao>{showMovie.vote_average}/10</Avaliacao>
@@ -128,7 +140,7 @@ const ShowMovie = () => {
                     </WrapperTexts>
                 </ContainerText>
 
-            </FilmeContainer>
+            </MovieContainer>
 
             <ScrollView showsVerticalScrollIndicator={false}>
 

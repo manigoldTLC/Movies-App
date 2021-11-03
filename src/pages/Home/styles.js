@@ -50,7 +50,7 @@ export const Banner = styled.Image`
 `;
 
 export const TextBanner = styled.Text`
-    color: #fff;
+    color: #FEFEFF;
     font-size: 16px;
     padding-left: 5px;
     padding-top: 5px;
