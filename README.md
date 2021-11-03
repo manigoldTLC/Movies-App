@@ -12,12 +12,12 @@
 
 ### Funcionalidades
 
--[x] Descobrir filmes em destaque;
--[x] Receber uma recomendação de filme;
--[x] Conferir os próximos lançamentos;
--[x] Pesquisar filmes;
--[x] Ver detalhes do filme como: data que foi lançado, gêneros, descrição, avaliação.
--[x] Favoritar um filme e conferi-lo em uma tela especifica de filmes favoritos.
+- [x] Descobrir filmes em destaque;
+- [x] Receber uma recomendação de filme;
+- [x] Conferir os próximos lançamentos;
+- [x] Pesquisar filmes;
+- [x] Ver detalhes do filme como: data que foi lançado, gêneros, descrição, avaliação.
+- [x] Favoritar um filme e conferi-lo em uma tela especifica de filmes favoritos.
 
 ---
 
