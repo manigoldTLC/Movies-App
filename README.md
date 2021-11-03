@@ -18,7 +18,7 @@
 - [x] Pesquisar filmes;
 - [x] Ver detalhes do filme como: data que foi lançado, gêneros, descrição, avaliação;
 - [x] Favoritar um filme e conferi-lo em uma tela especifica de filmes favoritos;
-- [] Assistir trailer.
+- [ ] Assistir trailer.
 
 ---
 
